@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --primary-color: #f60f20;
+}
+
+/* BASE STYLES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  color: #111;
+}
+
+section {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  padding: 100px;
+}
+
+/* BUTTON */
+.btn {
+  /* 
+        - I read several times that a button should be a button element, not a link that looks like a button
+        - TODO: check this
+    */
+  cursor: pointer;
+  display: inline-block; /* without this the margin wouldn't work, because an a element is an inline element */
+  background-color: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin: 20px 0;
+  border: 0;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+p {
+  margin: 20px 0 10px 0;
+  font-size: 1.1rem;
+  /* 
+    - rem is a multiplier of the font size of the root html element
+    - if the html element has no font size set, the default value is 16px
+  */
+}
+
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 100px;
+  font-size: 2rem;
+  font-weight: 700;
+  z-index: 20;
+}
+
+.navigation {
+  display: none;
+}
+
+/* HOMEPAGE */
+.home-content {
+  position: relative;
+  z-index: 10;
+  max-width: 600px;
+}
+
+.home-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 110%;
+}
